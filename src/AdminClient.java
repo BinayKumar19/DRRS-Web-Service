@@ -144,7 +144,7 @@ public class AdminClient {
     private CampusServerInterface getServerName(String adminId) {
         QName qname;
         Service service;
-        String wsdlPath, serverImpl, serverImplPort, nameSpaceURI = "http://server/";
+        String wsdlPath, serverImpl, serverImplPort, nameSpaceURI = "http://servers/";
 
         if (adminId.substring(0, 4).equals("DVLA")) {
             wsdlPath = "http://localhost:9897/CampusServerInterface?wsdl";

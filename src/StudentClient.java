@@ -46,7 +46,7 @@ public class StudentClient {
 
             QName qname;
             Service service;
-            String wsdlPath, serverImpl, serverImplPort, nameSpaceURI = "http://server/";
+            String wsdlPath, serverImpl, serverImplPort, nameSpaceURI = "http://servers/";
 
             if (sStudentId.substring(0, 4).equals("DVLS")) {
                 sServerName = "Dorval";
