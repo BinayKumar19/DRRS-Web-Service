@@ -12,8 +12,6 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
 import servers.CampusServerInterface;
-/*@author Binay
- Client for all students to book rooms,to know about available time slots and to cancel bookings.*/
 
 public class StudentClient {
     public static void main(String args[]) {

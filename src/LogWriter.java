@@ -7,11 +7,10 @@ public class LogWriter {
     BufferedWriter output = null;
     String logFIlePath = "./logs/";
 
-    LogWriter(String logFileName, Boolean appendFlag)
-    {
+    LogWriter(String logFileName, Boolean appendFlag) {
         FileWriter file = null;
         try {
-            file = new FileWriter(logFIlePath + logFileName,appendFlag);
+            file = new FileWriter(logFIlePath + logFileName, appendFlag);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -19,8 +18,7 @@ public class LogWriter {
     }
 
 
-    public void writeToLog(String line)
-    {
+    public void writeToLog(String line) {
         try {
             output.append(line);
         } catch (IOException e) {
@@ -28,8 +26,7 @@ public class LogWriter {
         }
     }
 
-    public void closeLogWriter()
-    {
+    public void closeLogWriter() {
         try {
             output.close();
         } catch (IOException e) {
