@@ -53,13 +53,17 @@ public class AdminClient {
         client.lw = new LogWriter("AdminClient_" + adminId + ".txt", true);
         client.lw.writeToLog("Admin ID:" + adminId + System.lineSeparator());
 
-        if (adminId.length() != 8)
+        if (adminId.length() != 8) {
             status = "Invalid Admin ID";
+            System.out.println(status);
+            return;
+        }
 
         try {
             int i = Integer.parseInt(adminId.substring(4));
         } catch (Exception e) {
             status = "Invalid Admin ID";
+            System.out.println(status);
             return;
         }
 
@@ -68,7 +72,7 @@ public class AdminClient {
         client.lw.writeToLog(status + System.lineSeparator() + System.lineSeparator());
         client.lw.closeLogWriter();
 
-}
+    }
 
     private String performOperation(String adminId) {
         String operationChoice, status = null, registryURL = null, date = null;
